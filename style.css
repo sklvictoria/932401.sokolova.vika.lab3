@@ -279,8 +279,6 @@ footer {
     padding: 10px;
 }
 
-
-/* ≤1024px */
 @media (max-width: 1024px) {
     .skill-card {
         flex: 1 1 calc(50% - 20px); 
@@ -295,7 +293,6 @@ footer {
     }
 }
 
-/* ≤768px */
 @media (max-width: 768px) {
     .skill-card {
         flex: 1 1 100%;
