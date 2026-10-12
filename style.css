@@ -7,7 +7,7 @@
     --color-aside:    #6B3410;   
     --color-light:    #FFFFFF;   
     --color-visited:  #F5E6D3;
-    --color-dark-gray:#3A3A3A; 
+    --color-dark-gray:#3A3A3A;
     --font-main:      Arial, sans-serif;
 }
 
@@ -31,11 +31,21 @@ header {
     text-align: center;
 }
 
+header h1 {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
 .sticky-nav {
     position: sticky;
     top: 0;
     background-color: var(--color-header);
-    padding: 12px 20px;
+    padding: 8px 20px;
     text-align: center;
     z-index: 100;
     display: flex;
@@ -47,10 +57,11 @@ header {
 .sticky-nav a {
     color: var(--color-light);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 5px 0;
     position: relative;    
     transition: color 0.3s ease;    
+    font-size: 14px;
 }
 
 .sticky-nav a:visited {
@@ -133,8 +144,7 @@ section {
 }
 
 .skill-card {
-    flex: 1 1 calc(25% - 20px);
-    flex-direction: column;
+    flex: 1 1 calc((100% - 60px) / 4);
     background-color: var(--color-dark-gray);
     border-radius: 10px;
     padding: 15px;
@@ -223,10 +233,17 @@ form {
     color: var(--color-text);
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
 input, textarea {
     width: 100%;
     padding: 8px;
-    margin: 5px 0 15px 0;
+    margin: 0 0 15px 0;
     border: 1px solid var(--color-accent);
     box-sizing: border-box;
     font-family: var(--font-main);
@@ -281,7 +298,7 @@ footer {
 
 @media (max-width: 1024px) {
     .skill-card {
-        flex: 1 1 calc(50% - 20px); 
+        flex: 1 1 calc((100% - 20px) / 2); /* 2 колонки */
     }
     
     .stats-grid {
@@ -289,13 +306,13 @@ footer {
     }
     
     .sticky-nav a {
-        margin: 0 10px;
+        margin: 0 8px;
     }
 }
 
 @media (max-width: 768px) {
     .skill-card {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* 1 колонка */
     }
     
     .stats-grid {
